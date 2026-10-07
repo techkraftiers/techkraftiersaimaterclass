@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Digital Marketing Masterclass | Techkraftiers Academy</title>
+
+    <meta name="description"
+          content="Join the FREE 60-minute AI Digital Marketing Masterclass for students, freshers, professionals and entrepreneurs in Navi Mumbai.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Tiro+Devanagari+Marathi&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #030712;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* ====================
+           BACKGROUND & NAVI MUMBAI IMAGE OVERLAY
+           ==================== */
+
+        .hero::before {
+            content: "";
+
+
+
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: 
+                linear-gradient(180deg, rgba(3, 7, 18, 0.75) 0%, rgba(3, 7, 18, 0.95) 100%),
+                url('https://www.reliancedigitalcommunity.com/assets/students.png') center/cover no-repeat;
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -5;
+
+            background:
+                radial-gradient(circle at 15% 30%, rgba(0, 140, 255, 0.25), transparent 35%),
+                radial-gradient(circle at 80% 40%, rgba(124, 58, 237, 0.25), transparent 35%),
+                radial-gradient(circle at 50% 90%, rgba(255, 92, 0, 0.15), transparent 30%);
+
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -4;
+
+            background-image:
+                linear-gradient(rgba(0, 166, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 166, 255, 0.05) 1px, transparent 1px);
+
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, black, transparent);
+            pointer-events: none;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        .navbar {
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 8%;
+
+            background: rgba(3, 7, 24, 0.75);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+
+            backdrop-filter: blur(20px);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #ff8500;
+        }
+
+        .logo .ai {
+            color: #ffd21c;
+            margin-left: 5px;
+            background: linear-gradient(135deg, #ffd21c, #ff6c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-btn {
+            border: none;
+            outline: none;
+
+            padding: 12px 28px;
+
+            border-radius: 30px;
+
+            color: white;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            background: linear-gradient(135deg, #ff7100, #ff9b00);
+
+            box-shadow: 0 0 25px rgba(255, 106, 0, 0.35);
+
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 0 35px rgba(255, 106, 0, 0.6);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: calc(100vh - 76px);
+
+            padding: 80px 8% 70px;
+
+            display: grid;
+            grid-template-columns: 1fr 1.05fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            position: relative;
+        }
+
+        .hero-left {
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 18px;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255, 128, 0, 0.6);
+
+            background: rgba(255, 108, 0, 0.12);
+
+            color: #ff9b28;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            margin-bottom: 22px;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #ff8500;
+
+            box-shadow: 0 0 12px #ff8500;
+            animation: pulse-dot 1.5s infinite alternate;
+        }
+
+        @keyframes pulse-dot {
+            0% { transform: scale(0.8); opacity: 0.6; }
+            100% { transform: scale(1.3); opacity: 1; }
+        }
+
+        /* TYPOGRAPHY FIX FOR MARATHI & INTERACTIVE LOOK */
+        .hero h1 {
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero .marathi-title {
+            display: block;
+            font-family: "Poppins", "Tiro Devanagari Marathi", sans-serif;
+            font-size: clamp(42px, 5.5vw, 72px);
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            letter-spacing: normal;
+        }
+
+        .hero .ai-text {
+            display: block;
+            font-size: clamp(46px, 6vw, 80px);
+            font-weight: 900;
+            letter-spacing: -2px;
+            background: linear-gradient(110deg, #ff7b00, #ffd21a, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: #dce3f1;
+
+            font-size: 19px;
+
+            line-height: 1.7;
+
+            margin-bottom: 32px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-description strong {
+            color: #ffffff;
+        }
+
+        .highlight {
+            display: inline-block;
+
+            color: #ff9b29;
+
+            font-weight: 800;
+        }
+
+        /* =========================
+           HERO FEATURES
+        ========================== */
+
+        .hero-features {
+            display: flex;
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-bottom: 35px;
+        }
+
+        .feature-pill {
+            padding: 12px 18px;
+
+            border-radius: 12px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            color: #ffffff;
+
+            font-size: 14px;
+
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        .feature-pill:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .feature-pill span {
+            color: #ff9900;
+            margin-right: 6px;
+        }
+
+        .main-cta {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
+
+            padding: 18px 34px;
+
+            border-radius: 50px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: 800;
+
+            background: linear-gradient(90deg, #ff7200, #ff006e, #008cff);
+            background-size: 200% auto;
+
+            box-shadow: 0 10px 30px rgba(255, 114, 0, 0.3);
+
+            transition: 0.4s ease;
+        }
+
+        .main-cta:hover {
+            background-position: right center;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 140, 255, 0.4);
+        }
+
+        /* =========================
+           FORM CARD
+        ========================== */
+
+        .form-card {
+            position: relative;
+
+            padding: 38px;
+
+            border-radius: 24px;
+
+            background: rgba(12, 18, 38, 0.82);
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.6),
+                inset 0 0 30px rgba(255, 255, 255, 0.03);
+
+            backdrop-filter: blur(25px);
+
+            z-index: 5;
+            transition: 0.3s ease;
+        }
+
+        .form-title {
+            font-size: 28px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+            background: linear-gradient(135deg, #ffffff, #b0c4de);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .form-subtitle {
+            color: #a0aec0;
+
+            font-size: 14px;
+
+            margin-bottom: 28px;
+        }
+
+        .form-row {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 16px;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        .field label {
+            display: block;
+
+            color: #e2e8f0;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: #ff6c00;
+        }
+
+        input,
+        select {
+            width: 100%;
+
+            height: 50px;
+
+            padding: 0 16px;
+
+            border-radius: 12px;
+
+            outline: none;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            background: rgba(5, 10, 25, 0.7);
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            transition: .25s;
+        }
+
+        input::placeholder {
+            color: #64748b;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #ff7900;
+
+            box-shadow: 0 0 15px rgba(255, 121, 0, 0.25);
+        }
+
+        select option {
+            background: #0c1226;
+            color: white;
+        }
+
+        /* =========================
+           CATEGORY
+        ========================== */
+
+        .category-title {
+            color: #e2e8f0;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 9px;
+        }
+
+        .categories {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 9px;
+
+            margin-bottom: 18px;
+        }
+
+        .category {
+            position: relative;
+        }
+
+        .category input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .category label {
+            min-height: 62px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 8px;
+
+            border-radius: 12px;
+
+            border: 1px solid rgba(255,255,255,0.1);
+
+            background: rgba(5, 10, 25, 0.5);
+
+            color: #cbd5e1;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            cursor: pointer;
+
+            transition: .25s;
+        }
+
+        .category input:checked + label {
+            color: #ffffff;
+
+            border-color: #ff7800;
+
+            background: rgba(255, 104, 0, 0.18);
+
+            box-shadow: 0 0 20px rgba(255, 104, 0, 0.15);
+            font-weight: 700;
+        }
+
+        /* =========================
+           PHONE
+        ========================== */
+
+        .phone-box {
+            display: grid;
+
+            grid-template-columns: 70px 1fr 100px;
+
+            gap: 8px;
+        }
+
+        .country-code {
+            height: 50px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: rgba(5, 10, 25, 0.7);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .otp-btn {
+            border: none;
+
+            border-radius: 12px;
+
+            color: white;
+
+            font-family: inherit;
+
+            font-weight: 700;
+
+            background: linear-gradient(135deg, #ff7100, #e76b27);
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .otp-btn:hover {
+            box-shadow: 0 0 15px rgba(255, 113, 0, 0.4);
+        }
+
+        /* =========================
+           CONSENT
+        ========================== */
+
+        .consent {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 10px;
+
+            margin: 18px 0;
+
+            color: #94a3b8;
+
+            font-size: 12px;
+
+            line-height: 1.5;
+        }
+
+        .consent input {
+            width: 18px;
+            height: 18px;
+
+            margin-top: 1px;
+
+            accent-color: #ff7900;
+        }
+
+        /* =========================
+           REGISTER BUTTON
+        ========================== */
+
+        .register-btn {
+            width: 100%;
+
+            height: 56px;
+
+            border: 0;
+
+            border-radius: 30px;
+
+            color: #ffffff;
+
+            font-family: inherit;
+
+            font-size: 16px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            background: linear-gradient(90deg, #ff7a00, #ff006a, #007bff);
+            background-size: 200% auto;
+
+            transition: .4s;
+
+            box-shadow: 0 10px 25px rgba(255, 122, 0, 0.25);
+        }
+
+        .register-btn:disabled {
+            opacity: 0.65;
+            cursor: wait;
+            transform: none;
+        }
+
+        .register-btn:hover {
+            background-position: right center;
+
+            box-shadow: 0 12px 35px rgba(255, 105, 0, .4);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        .section {
+            padding: 90px 8%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: clamp(30px, 4vw, 46px);
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #ff8500;
+        }
+
+        .section-desc {
+            max-width: 700px;
+
+            margin: 0 auto 50px;
+
+            text-align: center;
+
+            color: #9fa9be;
+
+            line-height: 1.7;
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .info-card {
+            padding: 32px;
+
+            min-height: 200px;
+
+            border-radius: 20px;
+
+            background: rgba(11, 18, 39, .65);
+
+            border: 1px solid rgba(255, 255, 255, .08);
+
+            backdrop-filter: blur(15px);
+
+            transition: .3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+
+            border-color: rgba(255, 121, 0, .4);
+
+            box-shadow: 0 20px 40px rgba(0,0,0,.4);
+        }
+
+        .icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            margin-bottom: 20px;
+
+            font-size: 26px;
+
+            background: rgba(255, 113, 0, .12);
+            border: 1px solid rgba(255, 113, 0, .2);
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+
+            margin-bottom: 12px;
+        }
+
+        .info-card p {
+            color: #939eb5;
+
+            line-height: 1.7;
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           LEARNING SECTION
+        ========================== */
+
+        .learning {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .learning-content h2 {
+            font-size: clamp(32px, 4vw, 52px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .learning-content h2 span {
+            color: #ff8500;
+        }
+
+        .learning-content p {
+            color: #9fa9be;
+
+            line-height: 1.8;
+
+            margin-bottom: 25px;
+        }
+
+        .learning-list {
+            display: grid;
+
+            gap: 12px;
+        }
+
+        .learning-item {
+            padding: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            border-radius: 14px;
+
+            background: rgba(255,255,255,.03);
+
+            border: 1px solid rgba(255,255,255,.06);
+            backdrop-filter: blur(10px);
+        }
+
+        .check {
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255, 125, 0, .15);
+
+            color: #ff9a00;
+            font-weight: bold;
+        }
+
+        /* =========================
+           FINAL CTA
+        ========================== */
+
+        .final-cta {
+            margin: 30px 8% 90px;
+
+            padding: 70px 30px;
+
+            text-align: center;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(124,58,237,.25),
+                    transparent 65%
+                ),
+                rgba(12,18,40,.85);
+
+            border: 1px solid rgba(255,255,255,.12);
+            backdrop-filter: blur(20px);
+        }
+
+        .final-cta h2 {
+            font-size: clamp(32px, 5vw, 58px);
+
+            font-weight: 900;
+
+            margin-bottom: 15px;
+        }
+
+        .final-cta h2 span {
+            color: #ff8500;
+        }
+
+        .final-cta p {
+            color: #9ea8bd;
+
+            margin-bottom: 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 30px 8%;
+
+            text-align: center;
+
+            color: #7e889e;
+
+            border-top: 1px solid rgba(255,255,255,.06);
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #cdd4e4;
+        }
+
+        /* =========================
+           SUCCESS MODAL
+        ========================== */
+
+        .modal {
+            position: fixed;
+
+            inset: 0;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            background: rgba(0,0,0,.82);
+
+            backdrop-filter: blur(12px);
+
+            z-index: 5000;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .success-box {
+            width: 100%;
+            max-width: 480px;
+
+            padding: 40px 30px;
+
+            text-align: center;
+
+            border-radius: 24px;
+
+            background: linear-gradient(145deg, #111a38, #0b1025);
+
+            border: 1px solid rgba(0, 218, 255, .30);
+
+            box-shadow: 0 30px 100px rgba(0,0,0,.8);
+
+            animation: popup .35s ease;
+        }
+
+        @keyframes popup {
+            from {
+                opacity: 0;
+                transform: scale(.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .success-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            font-size: 34px;
+
+            background: rgba(0, 220, 160, .12);
+
+            border: 1px solid rgba(0, 220, 160, .25);
+
+            color: #00e0a0;
+        }
+
+        .success-box h2 {
+            font-size: 27px;
+
+            margin-bottom: 12px;
+        }
+
+        .success-box p {
+            color: #a7b0c4;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #16a34a;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+
+            transition: .3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20bd59;
+
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(22, 163, 74, 0.3);
+        }
+
+        .close-btn {
+            width: 100%;
+
+            height: 48px;
+
+            border: 1px solid rgba(255,255,255,.1);
+
+            border-radius: 14px;
+
+            background: transparent;
+
+            color: #aeb7c9;
+
+            font-family: inherit;
+
+            cursor: pointer;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .form-card {
+                max-width: 700px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .learning {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .nav-btn {
+                padding: 10px 20px;
+            }
+
+            .hero {
+                padding: 40px 5% 50px;
+
+                gap: 40px;
+            }
+
+            .hero .marathi-title {
+                font-size: 42px;
+            }
+
+            .hero .ai-text {
+                font-size: 46px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .form-card {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .phone-box {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .otp-btn {
+                grid-column: 2;
+                height: 45px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 5%;
+            }
+
+            .final-cta {
+                margin: 20px 5% 60px;
+
+                padding: 50px 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <span>Techkraftiers Academy,</span>
+        <span class="ai">Nerul</span>
+    </div>
+
+    <button class="nav-btn"
+            onclick="scrollToRegistration()">
+        Register Now
+    </button>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-left">
+
+        <div class="badge">
+            Learn AI Build Your Career
+        </div>
+        <h1>
+            <span class="marathi-title">Free AI Digital Marketing</span>
+            <span class="ai-text"> MasterClass</span>
+        </h1>
+        <p class="hero-description">
+         <strong>AI वापरून Digital Marketing मध्ये एक पाऊल पुढे!</strong>
+            <br>
+            Students, freshers, professionals आणि entrepreneurs साठी खास
+
+            <span class="highlight">
+                FREE 60-Minute AI Digital Marketing Masterclass.
+            </span>
+
+        </p>
+
+
+        <div class="hero-features">
+    <div class="feature-pill">
+                <span>🎓</span>
+                FREE Masterclass
+            </div>
+
+            <div class="feature-pill">
+                <span>🤖</span>
+                AI + Marketing
+            </div>
+
+            <div class="feature-pill">
+                <span>🚀</span>
+                Career Ready
+            </div>
+
+        </div>
+        <a href="#registration"
+           class="main-cta">
+
+            YES, I'M READY
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         REGISTRATION FORM
+    ========================== -->
+
+    <div class="form-card"
+         id="registration">
+
+        <div class="form-title">
+          Fill the form for registration
+        </div>
+
+        <div class="form-subtitle">
+        </div>
+        <form id="registrationForm">
+
+
+            <!-- NAME + AREA -->
+
+            <div class="form-row">
+
+                <div class="field">
+
+                    <label>
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+                <div class="field">
+                    <label>
+                        Navi Mumbai Area
+                        <span class="required">*</span>
+                    </label>
+
+                    <select id="area" required>
+                        <option value="">
+                            Select your area
+                        </option>
+
+                        <option>Vashi</option>
+                        <option>Sanpada</option>
+                        <option>Juinagar</option>
+                        <option>Nerul</option>
+                        <option>Seawoods</option>
+                        <option>CBD Belapur</option>
+                        <option>Kopar Khairane</option>
+                        <option>Ghansoli</option>
+                        <option>Airoli</option>
+                        <option>Rabale</option>
+                        <option>Turbhe</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+
+            <div class="category-title">
+
+                I am a...
+
+                <span class="required">*</span>
+
+            </div>
+<div class="categories">
+
+    <!-- Row 1 -->
+
+    <div class="category">
+        <input 
+            type="radio" 
+            id="school" 
+            name="category" 
+            value="10th/12th"
+        >
+        <label for="school">
+            🎓 10th, 12th
+        </label>
+    </div>
+
+    <div class="category">
+        <input 
+            type="radio" 
+            id="college" 
+            name="category" 
+            value="College Student"
+        >
+        <label for="college">
+            👨‍🎓 College Student
+        </label>
+    </div>
+
+    <div class="category">
+        <input 
+            type="radio" 
+            id="freshers" 
+            name="category" 
+            value="Freshers/Job Seekers"
+        >
+        <label for="freshers">
+            💼 Freshers / Job Seekers
+        </label>
+    </div>
+
+
+    <!-- Row 2 -->
+    <div class="category">
+        <input 
+            type="radio" 
+            id="bba-bms-bcom" 
+            name="category" 
+            value="BBA/BMS/BCom Student"
+        >
+        <label for="bba-bms-bcom">
+            👨‍🎓 BBA, BMS / BCom Students
+
+
+        </label>
+    </div>
+
+    <div class="category">
+        <input 
+            type="radio" 
+            id="engineering-it" 
+            name="category" 
+            value="Engineering/IT Student"
+        >
+        <label for="engineering-it">
+            💻 Engineering / IT Students
+        </label>
+    </div>
+
+    <div class="category">
+        <input 
+            type="radio" 
+            id="mba-marketing" 
+            name="category" 
+            value="MBA/Marketing Student"
+        >
+        <label for="mba-marketing">
+            📈 MBA / Marketing Students
+        </label>
+    </div>
+
+</div>
+
+            <!-- MOBILE -->
+
+            <div class="field">
+
+                <label>
+                    Mobile Number
+                    <span class="required">*</span>
+                </label>
+
+                <div class="phone-box">
+
+                    <div class="country-code">
+                        +91
+                    </div>
+
+                    <input
+                        type="tel"
+                        id="mobile"
+                        maxlength="10"
+                        placeholder="10-digit mobile number"
+                        required
+                    >
+
+                </div>
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+          <small class="field-note">Registration confirmation will be sent to this email.</small>
+        </div>
+
+
+            </div>
+
+
+            <!-- CONSENT -->
+
+            <div class="consent">
+
+                <input
+                    type="checkbox"
+                    id="consent"
+                    required
+                >
+
+                <label for="consent">
+
+                    मी WhatsApp वर AI Masterclass संदर्भातील
+                    confirmation आणि updates प्राप्त करण्यास सहमत आहे.
+
+                    <span class="required">*</span>
+
+                </label>
+
+            </div>
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="submit"
+                class="register-btn">
+
+                REGISTER & GET CONFIRMATION
+                <span>»</span>
+
+            </button>
+
+            <div style="margin-top:12px;text-align:center;color:#7f8ea8;font-size:11px;line-height:1.5;">
+                By registering, you agree to receive WhatsApp confirmation and updates.
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MASTERCLASS AGENDA
+========================== -->
+<section class="section">
+  <h2 class="section-title">What You Will <span>Learn</span></h2>
+  <p class="section-desc">A practical 60-minute session covering AI-powered Digital Marketing, career skills and real-world use cases.</p>
+  <div class="cards">
+    <div class="info-card"><div class="icon">🔍</div><h3>What is Digital marketing</h3><p>Keyword ideas, content planning and faster SEO research using AI.</p></div>
+    <div class="info-card"><div class="icon">📱</div><h3>Social Media</h3><p>Create content calendars, captions, hooks and campaign ideas with AI.</p></div>
+    <div class="info-card"><div class="icon">📈</div><h3>Career opportunities Job role</h3><p>Explore Digital Marketing roles and the skills you can start building today.</p></div>
+    <div class="info-card"><div class="icon">✍️</div><h3>How AI is Trasaforming Marketing</h3><p>AI is transforming marketing by enabling personalized customer experiences, smarter data analysis, automation</p></div>
+    <div class="info-card"><div class="icon">📧</div><h3>Live AI Digital Marketing</h3><p>AI-powered real-time marketing that analyzes customer behavior, personalizes content, automates campaigns</p></div>
+    <div class="info-card"><div class="icon">💼</div><h3>Skills Company Expert</h3><p>Expertise in AI, digital marketing, data analytics, social media marketing, SEO, content creation.</p></div>
+  </div>
+</section>
+
+<!-- =========================
+     WHY AI
+========================== -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Why Learn <span>AI + Digital Marketing?</span>
+    </h2>
+
+
+    <p class="section-desc">
+
+        AI मुळे Digital Marketing ची पद्धत वेगाने बदलत आहे. Content, SEO, Social Media, Ads, Research आणि Automation मध्ये AI चा smart वापर शिकणे ही आजची practical career skill आहे.
+
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🤖
+            </div>
+
+            <h3>
+                Learn AI Marketing
+            </h3>
+
+            <p>
+                AI tools वापरून content, campaigns आणि marketing ideas तयार करण्याची basics शिका.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                💡
+            </div>
+
+            <h3>
+                Create With AI
+            </h3>
+
+            <p>
+                Prompts, content ideas, captions, ad copy आणि research faster तयार करा.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🚀
+            </div>
+
+            <h3>
+                Build Your Career
+            </h3>
+
+            <p>
+                Digital Marketing, SEO, Social Media आणि Performance Marketing मधील career paths समजून घ्या.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LEARNING
+========================== -->
+
+<section class="section">
+
+    <div class="learning">
+
+
+        <div class="learning-content">
+
+            <h2>
+                एका तासात
+                <span>AI with Digital Marketing</span>
+            </h2>
+
+            <p>
+                हा Masterclass beginners साठी design केलेला आहे. AI किंवा Digital Marketing चा prior experience आवश्यक नाही.
+            </p>
+
+
+            <div class="learning-list">
+
+
+                <div class="learning-item">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                           What is Digital marketing
+                        </strong>
+                        <br>
+                        <small>
+                           Keyword ideas, content planning and faster SEO research using AI.
+                        </small>
+                    </div>
+
+                </div>
+                <div class="learning-item">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                           How AI Is Transforming Marketing
+                        </strong>
+                        <br>
+                        <small>
+                            AI is transforming marketing by enabling personalized customer 
+                            experiences, smarter data analysis, automation
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-item">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Live AI Digital Marketing
+                        </strong>
+                        <br>
+                        <small>
+                            AI-powered real-time marketing that analyzes customer behavior, personalizes content, automates campaigns
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-item">
+
+                    <div class="check">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>
+                            Skills Company Expert
+                        </strong>
+                        <br>
+                        <small>
+                            Expertise in AI, digital marketing, data analytics, social media marketing, SEO, content creation
+                        </small>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <h3>
+                Career Opportunities
+            </h3>
+
+            <p>
+                Explore Digital Marketing roles and the skills you can start building today.
+
+                <br><br>
+
+                <strong>Digital Marketing Executive • SEO Executive • Social Media Executive • Performance Marketing • AI Marketing Specialist</strong>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FREE BONUSES
+========================== -->
+<section class="section">
+  <h2 class="section-title">FREE <span>Masterclass + Exclusive Student</span> Resource kit Worth 3000+</h2>
+  <p class="section-desc">Attend the complete session and take these resources with you.</p>
+  <div class="cards">
+    <div class="info-card"><div class="icon">🎁</div><h3>Resume LinkedIn Checklist</h3><p>Professional resume with clear skills, projects & achievements</p></div>
+    <div class="info-card"><div class="icon">🧰</div><h3>AI Tools and prompt</h3><p>A practical list of tools for content, research, marketing and productivity.</p></div>
+    <div class="info-card"><div class="icon">🗺️</div><h3>Digital Makerting Roadmap</h3><p>Understand what to learn next for a Digital Marketing career.</p></div>
+    <div class="info-card"><div class="icon">🗺️</div><h3>SEO Social Media CheatSheet</h3>Boost online visibility and engagement through smart SEO strategies, quality content</p></div>
+    <div class="info-card"><div class="icon">🗺️</div><h3>Real world Project Idea</h3>Build an AI-powered digital marketing system that analyzes customer data,and automates personalized marketing campaigns.</p></div>
+    <div class="info-card"><div class="icon">🗺️</div><h3>Certificate of Participation</h3>A certificate recognizing active participation and contribution in a workshop, event, competitio</p></div>
+  </div>
+</section>
+
+<!-- =======================
+     FINAL CTA
+======================== -->
+
+<section class="final-cta">
+
+    <h2>
+
+        AI शिकूया,
+        <span>Digital Marketing मध्ये Career घडवूया!</span>
+
+    </h2>
+
+    <p>
+
+        Join the FREE 60-Minute AI Digital Marketing Masterclass
+        आणि तुमच्या digital career journey ची सुरुवात करा.
+
+    </p>
+
+
+    <a>
+        🚀 RESERVE FREE SEAT
+    </a>
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    © 2026
+
+    <strong>
+        Techkraftiers Academy
+    </strong>
+
+     All Rights Reserved.
+
+</footer>
+
+
+<!-- =========================
+     SUCCESS MODAL
+========================== -->
+
+<div class="modal" id="successModal">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <h2>
+            Registration Successful!
+        </h2>
+
+
+        <p id="successText">
+            तुमची registration successfully completed आहे.  
+        </p>
+
+
+        <a
+            href="#"
+            target="_blank"
+            id="whatsappButton"
+            class="whatsapp-btn">
+
+            💬 Open Admin WhatsApp
+
+        </a>
+
+        <a
+            href="#"
+            target="_blank"
+            id="studentWhatsappButton"
+            class="whatsapp-btn"
+            style="display:none; background:#128C7E;">
+
+            📲 Open Student Confirmation
+
+        </a>
+
+
+        <button
+            class="close-btn"
+            onclick="closeModal()">
+
+            Close
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /*
+     * ============================================================
+     * WHATSAPP + EMAIL CONFIGURATION
+     * ============================================================
+     *
+     * IMPORTANT:
+     * A browser cannot silently send WhatsApp messages.
+     * For REAL automatic delivery to both admin and student,
+     * set up the backend endpoint below with a WhatsApp Business
+     * API provider (Meta Cloud API / Twilio / other provider).
+     *
+     * The frontend sends the registration to BACKEND_API_URL.
+     * The backend should:
+     *   1. Save the registration.
+     *   2. Send ADMIN_WHATSAPP message.
+     *   3. Send STUDENT_WHATSAPP message.
+     *   4. Optionally send acknowledgement email.
+     *
+     * If BACKEND_API_URL is empty, the page uses a safe fallback:
+     * it opens WhatsApp for the admin with the registration text.
+     */
+
+    const ADMIN_WHATSAPP = "917738415492";
+const BACKEND_API_URL = "http://localhost:3000/api/register";
+
+async function sendRegistrationToBackend(data) {
+  if (!BACKEND_API_URL) return { ok: false, configured: false };
+  const response = await fetch(BACKEND_API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+  let result = {};
+  try { result = await response.json(); } catch (_) {}
+  if (!response.ok) throw new Error(result.message || "Registration service failed.");
+  return { ok: true, configured: true, ...result };
+}
+
+function buildAdminMessage(data) {
+  return `🚀 *NEW AI DIGITAL MARKETING MASTERCLASS REGISTRATION*
+
+👤 *Name:* ${data.fullName}
+📍 *Area:* ${data.area}
+🎓 *Category:* ${data.category}
+📱 *Mobile:* +91 ${data.mobile}
+📧 *Email:* ${data.email}
+🤖 *Masterclass:* FREE 60-Minute AI Digital Marketing Masterclass
+⏰ *Registration:* ${data.registeredAt}
+
+✅ *Status:* Registration Completed`;
+}
+
+function buildStudentMessage(data) {
+  return `Hi ${data.fullName} 👋
+
+Your registration for the *FREE AI Digital Marketing Masterclass* has been received successfully. ✅
+
+🎓 Category: ${data.category}
+📍 Area: ${data.area}
+📱 Mobile: +91 ${data.mobile}
+📧 Email: ${data.email}
+
+We will share the masterclass confirmation/details with you shortly.
+
+— Techkraftiers Academy`;
+}
+
+    /* =========================
+       SCROLL
+    ========================== */
+
+    function scrollToRegistration() {
+        document.getElementById("registration").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    /* =========================
+       OTP DEMO
+    ========================== */
+
+    function sendOTP() {
+        const mobile = document.getElementById("mobile").value.trim();
+
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+            alert("कृपया valid 10-digit mobile number enter करा.");
+            return;
+        }
+
+        alert("OTP verification साठी backend/API connect करणे आवश्यक आहे.");
+    }
+
+    /*=======================
+
+    FORM SUBMIT
+      =======================*/
+
+document.getElementById("registrationForm").addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const fullName = document.getElementById("fullName").value.trim();
+        const area = document.getElementById("area").value;
+        const mobile = document.getElementById("mobile").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const consent = document.getElementById("consent").checked;
+        const categoryElement = document.querySelector('input[name="category"]:checked');
+
+        if (!categoryElement) {
+            alert("कृपया तुमची category select करा.");
+            return;
+        }
+
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+            alert("कृपया valid 10-digit mobile number enter करा.");
+            return;
+        }
+
+        if (!consent) {
+            alert("कृपया WhatsApp consent accept करा.");
+            return;
+        }
+
+        const category = categoryElement.value;
+
+        // Backend required fields: fullName, email, mobile, area, category
+        const registrationData = {
+            fullName: fullName,
+            email: email,
+            mobile: mobile,
+            area: area,
+            category: category,
+            registeredAt: new Date().toISOString()
+        };
+        const adminMessage = buildAdminMessage(registrationData);
+        const studentMessage = buildStudentMessage(registrationData);
+
+        // Store locally as a backup.
+        localStorage.setItem(
+            "naviMumbaiAIRegistration",
+            JSON.stringify(registrationData)
+        );
+
+        // Admin fallback URL.
+        const adminWhatsappURL =
+            "https://wa.me/" +
+            ADMIN_WHATSAPP +
+            "?text=" +
+            encodeURIComponent(adminMessage);
+
+        // Student fallback URL.
+        const studentWhatsappURL =
+            "https://wa.me/" +
+            registrationData.studentWhatsapp +
+            "?text=" +
+            encodeURIComponent(studentMessage);
+
+        const submitButton = document.querySelector(".register-btn");
+        const originalButtonHTML = submitButton.innerHTML;
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = "PROCESSING...";
+
+        try {
+            const result = await sendRegistrationToBackend(registrationData);
+
+            document.getElementById("successText").innerHTML =
+                `Thank you <strong>${escapeHTML(fullName)}</strong>!<br><br>
+                 तुमची Techkraftiers Academy Masterclass registration successfully completed आहे.`;
+
+            document.getElementById("whatsappButton").href = adminWhatsappURL;
+
+            /*
+             * When a backend is configured, automatic messages should be
+             * sent by the backend. The student fallback button is hidden
+             * because opening wa.me cannot automatically send a message.
+             */
+            const studentButton = document.getElementById("studentWhatsappButton");
+
+            if (result && result.mode === "fallback") {
+                studentButton.style.display = "flex";
+                studentButton.href = studentWhatsappURL;
+                document.getElementById("successText").innerHTML +=
+                    `<br><small style="color:#fbbf24;">
+                    Automatic WhatsApp delivery is not configured yet.
+                    </small>`;
+            } else {
+                studentButton.style.display = "none";
+            }
+
+            document.getElementById("successModal").classList.add("active");
+
+        } catch (error) {
+            console.error("Registration error:", error);
+
+            alert(
+                "Registration save/send nahi ho paya. Please try again."
+            );
+        } finally {
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonHTML;
+        }
+    });
+
+    /* =========================
+       CLOSE MODAL
+    ========================== */
+
+    function closeModal() {
+        document.getElementById("successModal").classList.remove("active");
+    }
+
+    function escapeHTML(text) {
+        const div = document.createElement("div");
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    document.getElementById("successModal").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeModal();
+        }
+    });
+
+</script>
+
+</body>
+</html>
